@@ -1,0 +1,28 @@
+Q1
+How do we get rid of an object?
+
+MyObject obj = new MyObject();
+// Use the object
+obj = null;  // Now the object is eligible for garbage collection
+
+Q2
+Create a small demo to understand variable scope in java
+
+public class Main {
+   public static void main(String[] args) {
+     System.out.println(x);
+     int X = 100;
+   }
+ }
+
+Can't print X because we haven't made it yet since the sout is above X
+
+Q3
+What's the constructor called that has parameters
+
+A constructor that has parameters are parametrized constructors
+
+public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
