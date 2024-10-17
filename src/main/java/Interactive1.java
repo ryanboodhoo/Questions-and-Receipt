@@ -25,7 +25,7 @@ public class Interactive1 {
         List<String> someLangs =languages.subList(0,3);//from index is inclusive //to index is exclusive
 
 
-
+//-----------New code just coding along with a video i found-------
 ArrayList<String>people = new ArrayList<>();
 
         people.add ("Ryan");
