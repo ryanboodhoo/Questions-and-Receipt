@@ -21,24 +21,22 @@ public class Store {
         // Calculate total cost
         double totalCost = price * quantity;
 
-        // Get the current date and format it
-        SimpleDateFormat longFormat = new SimpleDateFormat("MMMM dd, yyyy HH:mm:ss zzzz");
-
+        // Get the current date
+        SimpleDateFormat sdf = new SimpleDateFormat("EEEE, MMMM dd, yyyy");
+        String currentDate = sdf.format(new Date());
 
         // Print the receipt
-        System.out.println("\n----------------------------------------------");
-         System.out.println("Product: " + productName);
-        System.out.println("Price: $" + price);
-        System.out.println("Quantity: " + quantity);
-        System.out.println("Total: $" + totalCost);
-        System.out.println("Thank You have a good day");
-        System.out.println("Purchased on : " + new Date());
-        System.out.println("\n----------------------------------------------");
-
-        scanner.close();
-    }
-
-    public static void main(String[] args) {
-        printReceipt();
+        System.out.println("----------------------------------------------");
+        System.out.printf("%-5s %5s %10s %10s\n", "Name", "Qty", "Price", "Total");
+        System.out.println("----------------------------------------------");
+        System.out.printf("%-5s %4d %11s %10.2f\n", productName, quantity, "$" + String.format("%.2f", price),totalCost);
+        System.out.println("\n        Thank you. Come again!!!\n");
+        System.out.println("Purchased on: " + currentDate);
+        System.out.println("----------------------------------------------");
     }
 }
+    public static void main(String[] args) {
+        Store.printReceipt();
+    }
+
+
